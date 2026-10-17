@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Hour — Midnight Rush</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="app">
+    <header class="topbar">
+        <div class="logo">
+            <div class="logo-icon">✳</div>
+            <div>
+                <h1>Blue Hour</h1>
+                <small>Midnight Rush · Arcade</small>
+            </div>
+        </div>
+        <div class="tag">✦ chaos in bloom</div>
+    </header>
+
+    <main class="layout">
+        <section class="game-section">
+            <div class="intro">
+                <div>
+                    <div class="eyebrow">A beautiful little nightmare</div>
+                    <h2>Dance through<br>the <em>midnight.</em></h2>
+                </div>
+                <p>Dispare pétalas mágicas, sobreviva às ondas e encontre flores no meio do caos.</p>
+            </div>
+
+            <div class="game-frame">
+                <canvas id="game" width="760" height="480"></canvas>
+
+                <div class="overlay" id="overlay">
+                    <div class="overlay-content">
+                        <div class="moon">☾</div>
+                        <div class="eyebrow">The night is alive</div>
+                        <h3 id="overlayTitle">Welcome to midnight.</h3>
+                        <p id="overlayText">
+                            Um arcade frenético de flores, magia e sobrevivência.
+                            O jardim não vai facilitar sua vida.
+                        </p>
+                        <button id="startBtn">Enter the chaos</button>
+                        <p class="best-intro">Recorde pessoal: <span id="menuBest">0</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hud">
+                <div class="stat">
+                    <span>Score</span>
+                    <strong id="score">0000</strong>
+                </div>
+                <div class="stat">
+                    <span>Hearts</span>
+                    <strong id="lives">♥ ♥ ♥</strong>
+                </div>
+                <div class="stat">
+                    <span>Wave</span>
+                    <strong id="level">01</strong>
+                </div>
+                <div class="stat">
+                    <span>Best</span>
+                    <strong id="best">0000</strong>
+                </div>
+            </div>
+
+            <div class="power-status">
+                <span class="power-dot"></span>
+                <span id="powerStatus">Prepare-se para a noite.</span>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <div class="eyebrow">Survive the night</div>
+            <h3>Beautiful chaos.</h3>
+
+            <p class="description">
+                Inimigos chegam de todas as direções. Seus disparos são
+                automáticos, mas sobreviver depende de seus reflexos.
+                Colete flores especiais e enfrente os guardiões da noite.
+            </p>
+
+            <div class="objective">
+                <div class="objective-icon">✧</div>
+                <div>
+                    <strong>Pétalas mágicas</strong>
+                    <small>Seu ataque automático</small>
+                </div>
+            </div>
+
+            <div class="objective">
+                <div class="objective-icon">✿</div>
+                <div>
+                    <strong>Flores do jardim</strong>
+                    <small>Pontos, cura e poderes</small>
+                </div>
+            </div>
+
+            <div class="objective">
+                <div class="objective-icon">☄</div>
+                <div>
+                    <strong>Chuva de projéteis</strong>
+                    <small>Desvie e continue atacando</small>
+                </div>
+            </div>
+
+            <div class="objective">
+                <div class="objective-icon">♛</div>
+                <div>
+                    <strong>Guardiões lunares</strong>
+                    <small>Chefes a cada cinco ondas</small>
+                </div>
+            </div>
+
+            <div class="controls">
+                <h4>Controls</h4>
+                <div class="key-row">
+                    <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd>
+                    <span>Movimentar</span>
+                </div>
+                <div class="key-row">
+                    <kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd>
+                    <span>Movimentar</span>
+                </div>
+                <div class="key-row">
+                    <kbd>SPACE</kbd>
+                    <span>Dash e invulnerabilidade breve</span>
+                </div>
+                <div class="key-row">
+                    <kbd>ESC</kbd>
+                    <span>Pausar</span>
+                </div>
+            </div>
+
+            <div class="tip">
+                <span>✦</span>
+                Continue em movimento. Parar por muito tempo é perigoso.
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <span><strong>BLUE HOUR</strong> — a midnight fever dream</span>
+        <span>Bloom. Fight. Survive.</span>
+    </footer>
+</div>
+</body>
+</html>
